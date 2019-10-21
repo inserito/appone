@@ -14,7 +14,7 @@ public class ApponeApplication {
 		SpringApplication.run(ApponeApplication.class, args);
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String getAll() {
 		return "Hello App One";
 	}

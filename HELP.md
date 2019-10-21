@@ -1,10 +1,9 @@
 ./mvnv package
-<!-- ./mvnv spring-boot:run -->
 
-docker login --username=khawarhere --email=khawarhere@gmail.com
+docker login --username=khawarhere
 
 docker build -t appone .
 
-docker tag appone inserito/appone
+docker tag appone inserito/appone:2
 
 docker push inserito/appone
