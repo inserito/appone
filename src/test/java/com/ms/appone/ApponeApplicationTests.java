@@ -1,10 +1,10 @@
-package com.ms.AppOne;
+package com.ms.appone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AppOneApplicationTests {
+class ApponeApplicationTests {
 
 	@Test
 	void contextLoads() {
