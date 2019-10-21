@@ -1,0 +1,35 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  namespace: nsms
+  name: appone
+  labels:
+    app: appone
+spec:
+  template:
+    metadata:
+      labels:
+        app: appone
+        tier: web
+    spec:
+      containers:
+        - name: appone
+          image: inserito/appone
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: nsms
+  name: appone
+  labels:
+    app: appone
+spec:
+  type: NodePort
+  selector:
+    app: appone
+    tier: web
+  ports:
+    - port: 8080
+      targetPort: 8080
